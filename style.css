@@ -1,0 +1,57 @@
+/* Standard file name for CSS files is style.css */
+
+/* global styles, applies to any element on the website, even without a body tag. */
+body {
+  /* Long font-family value for fallbacks, if font "system-ui" is not recognized by the browser
+     Automatically created by Visual Studio Code. */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Sets the font type */
+}
+
+/* applies to all "h2" tags */
+h2 {
+  text-transform: uppercase; /* self-explanatory */
+}
+
+/* applies to all tags which have the class "red" */
+.red {
+  color: red; /* Sets the text color */
+}
+
+/* applies to all "i" tags which have the class "red" */
+i.red {
+  color: darkred;
+}
+
+.split {
+  margin: 20px 0; /* Sets the elements outer margin (the distance to other elements) */
+  /* The margin keyword is a shorthand for setting multiple settings at once, and has 3 primary use cases:
+    "margin: <x>;" sets the margin on all 4 sides to x
+    "margin: <x> <y>;" sets the vertical vargin to x and the horizontal margin to y
+    "margin: <top> <right> <bottom> <left>;" sets the margin on all 4 sides to the provided values.
+
+    This can be expanded with "margin-<direction>", direction being one of "top", "bottom", "right" or "left".
+
+    The setting "margin: 20px 0;" could be expanded to
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 0;
+      margin-right: 0;
+  */
+}
+
+/* only applies to "style" tags with the "fun" class */
+style.fun {
+  /* Make the style tag actually show up on the page */
+  display: inline-block; /* Changes the display mode of the element */
+
+  /* Make the style tags contents show in multiple lines, instead of a single line. */
+  white-space: pre; /* Shows or hides whitespaces in the HTML code when displaying the website */
+
+  /* Make the style tag stand out as a "text box", if you could call it that */
+  border: 2px solid black; /* Set the element border */
+  cursor: text; /* Set the cursor that is shown when hovering the element */
+  border-radius: 3px; /* Confusing name, rounds the elements corners */
+  background-color: #ccc; /* Set the element background color, to hex #cccccc in this case (rgb 204, 204, 204) [very light gray] */
+  padding: 8px; /* Sets the "inner margin" of an element, similar to "margin", see above ".split" */
+}
