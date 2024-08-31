@@ -42,3 +42,39 @@
     color: white;
   }
 </style>
+
+<hr class="split" />
+
+<!-- TODO: Explain name and id attributes -->
+
+<label for="enable-js">Show javascript related elements</label>
+<input type="checkbox" name="enable-js" id="enable-js" />
+
+<br />
+
+<!-- TODO: Improve readability -->
+<script>
+  // JS can be embedded directly into HTML
+  document.body.onmousedown = console.log;
+</script>
+<!-- JS can also be moved into a separate file, and then be "imported" with the "script" tags "src" attribute -->
+<script src="app.js"></script>
+
+<span class="js">
+  <!--    vvvvvvv Inline javascript that is run when the element is clicked -->
+  <button onclick="window.alert('Hello, World!')">window.alert</button>
+
+  <br class="split" />
+
+  <!-- TODO: explain textarea attributes -->
+  <!-- Textarea, used to let the user enter long & multiline texts -->
+  <textarea
+    name="js-alert-demo"
+    id="js-alert-demo"
+    placeholder="Enter text and press button below to show text in an alert."
+    rows="6"
+    cols="100"
+  ></textarea>
+  <br />
+  <button onclick="show_textbox_content('js-alert-demo')">Show text</button>
+</span>

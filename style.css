@@ -55,3 +55,19 @@ style.fun {
   background-color: #ccc; /* Set the element background color, to hex #cccccc in this case (rgb 204, 204, 204) [very light gray] */
   padding: 8px; /* Sets the "inner margin" of an element, similar to "margin", see above ".split" */
 }
+
+/* only applies to the element with the id "enable-js" 
+   there can only be one of each id */
+#enable-js {
+  transform: scale(1.5) translate(0, -1px); /* transforms an element in a number of ways, mainly translate (move) and scale */
+}
+
+.js {
+  display: none; /* Hide element completely */
+}
+
+/* TODO: explain ~ and : */
+/* Only show ".js" if "#enable-js" checkbox is checked */
+#enable-js:checked ~ .js {
+  display: initial; /* Undo changes to this elements display state */
+}
