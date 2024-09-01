@@ -52,7 +52,7 @@ style.fun {
   border: 2px solid black; /* Set the element border */
   cursor: text; /* Set the cursor that is shown when hovering the element */
   border-radius: 3px; /* Confusing name, rounds the elements corners */
-  background-color: #ccc; /* Set the element background color, to hex #cccccc in this case (rgb 204, 204, 204) [very light gray] */
+  background: #00000044; /* Set the element background to full black, but with low opacity. This just darkens the actual background */
   padding: 8px; /* Sets the "inner margin" of an element, similar to "margin", see above ".split" */
 }
 
