@@ -5,13 +5,16 @@
 //* Example code
 
 // Create a function
-function name(argument1, argument2) {
+function function_name(argument1, argument2) {
   // Do something
   console.log(argument1, argument2);
 
   // Return a value
   return "Hello, Functions!";
 }
+
+// Call the function
+function_name("Hello,", "World!");
 
 // Add a year to a "Date" object
 function add_year(date_object) {
