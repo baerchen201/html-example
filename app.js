@@ -1,6 +1,66 @@
 // Standard file names for JS files are app.js and script.js
 // I prefer app.js, but you can use either
-// TODO: Write more explanations
+// TODO: Write even more explanations
+
+//* Example code
+
+// Create a function
+function name(argument1, argument2) {
+  // Do something
+  console.log(argument1, argument2);
+
+  // Return a value
+  return "Hello, Functions!";
+}
+
+// Add a year to a "Date" object
+function add_year(date_object) {
+  // Just increment year
+  date_object.setFullYear(date_object.getFullYear() + 1);
+  return date_object;
+}
+
+function variable_examples() {
+  // Create local variable, cannot be accessed outside of this function
+  // It may be assigned a value immediately "let <name> = <value>;", or just be left empty.
+  let local;
+
+  // Create a new "Date" object and store it in the "local" variable
+  local = new Date();
+
+  // Local variables can still be passed as arguments and used by functions.
+  add_year(local);
+
+  ////////////////
+
+  // Create constant variable, cannot be changed after assignment or accessed outside of this function
+  const constant = new URL("https://example.com");
+
+  // Trying to change the value directly will fail
+  constant = new URL("https://baerchen201.github.io/html-example"); //! ERROR
+
+  // However, the properties of the object may be changed, even in a constant
+  constant.host = "baerchen201.github.io";
+  constant.pathname = "/html-example";
+
+  ////////////////
+
+  // Create normal variable, same as "let" (local), but older and will probably get deprecated soon
+  var variable;
+
+  // You can assign functions to variables
+  variable = function (argument) {
+    variable = argument; // Replaces itself
+  };
+
+  // Or pass functions as arguments
+  variable(console.log);
+
+  // Now "variable" is the same as "console.log"
+  variable("Hello, Variables!");
+}
+
+//* Actual code used on the website
 
 // TODO: Simplify more
 function show_textbox_content(textbox_id) {
