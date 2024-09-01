@@ -49,22 +49,26 @@
 <hr class="split" />
 
 <!-- TODO: Explain name and id attributes -->
+<!-- TODO: that above but better ^^^^ -->
 
 <label for="enable-js">Show javascript related elements</label>
+<!--   ^^^<------------vvvv         -->
 <input type="checkbox" name="enable-js" id="enable-js" />
+<!-- Use "id" for JavaScript with "document.getElementById(<id>)" -->
+<script>
+  // JavaScript can be embedded directly into HTML in a "script" tag
+
+  // Print "change" events to the console
+  document.getElementById("enable-js").onchange = console.log;
+</script>
+
+<!-- JavaScript can also be moved into a separate file, and then be "imported" with the "script" tags "src" attribute -->
+<script src="app.js"></script>
 
 <br />
 
-<!-- TODO: Improve readability -->
-<script>
-  // JS can be embedded directly into HTML
-  document.body.onmousedown = console.log;
-</script>
-<!-- JS can also be moved into a separate file, and then be "imported" with the "script" tags "src" attribute -->
-<script src="app.js"></script>
-
 <span class="js">
-  <!--    vvvvvvv Inline javascript that is run when the element is clicked -->
+  <!--    vvvvvvv Inline JavaScript that is run when the element is clicked -->
   <button onclick="window.alert('Hello, World!')">window.alert</button>
 
   <br class="split" />
