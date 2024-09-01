@@ -34,17 +34,28 @@ function variable_examples() {
   // Local variables can still be passed as arguments and used by functions.
   add_year(local);
 
+  console.log("Date in 1 year:", local);
+
   ////////////////
 
   // Create constant variable, cannot be changed after assignment or accessed outside of this function
   const constant = new URL("https://example.com");
 
+  // Use console.debug for debug logs and messages, that you don't have to see every time
+  console.debug(constant);
+
   // Trying to change the value directly will fail
-  constant = new URL("https://baerchen201.github.io/html-example"); //! ERROR
+  try {
+    constant = new URL("https://baerchen201.github.io/html-example"); //! ERROR
+  } catch (e) {
+    console.error(e);
+  }
 
   // However, the properties of the object may be changed, even in a constant
   constant.host = "baerchen201.github.io";
   constant.pathname = "/html-example";
+
+  console.log(constant);
 
   ////////////////
 
@@ -62,6 +73,7 @@ function variable_examples() {
   // Now "variable" is the same as "console.log"
   variable("Hello, Variables!");
 }
+variable_examples();
 
 //* Actual code used on the website
 
