@@ -60,7 +60,30 @@
   // JavaScript can be embedded directly into HTML in a "script" tag
 
   // Print "change" events to the console
-  document.getElementById("enable-js").onchange = console.log;
+  document.getElementById("enable-js").onchange = function (change_event) {
+    /*
+      <boolean> ? <ifTrue> : <ifFalse>
+      short for
+      if (<boolean>) {
+        <ifTrue>
+      } else {
+        <ifFalse>
+      }
+
+      window.alert(window.confirm("Are you sure?") ? "User confirmed" : "User cancelled")
+      is the same as
+      if (window.confirm("Are you sure?")) {
+        window.alert("User confirmed");
+      } else {
+        window.alert("User cancelled");
+      }
+    */
+    console.info(
+      change_event.target.checked
+        ? "JavaScript related elements shown"
+        : "JavaScript related elements hidden"
+    );
+  };
 </script>
 
 <!-- JavaScript can also be moved into a separate file, and then be "imported" with the "script" tags "src" attribute -->
